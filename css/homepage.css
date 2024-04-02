@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+header{ /* hier giben wir die eigenschaften für header*/
+    width: 1140px;
+    max-width: 80%;
+    margin-left: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+  
+#featured-animals-button { /* für 4 Tiere mit einem besonders aussehen button */
+    font-family: 'Poppins', sans-serif; /* Beispiel für eine moderne Schriftart */
+    background-color: #f1683a; /* Eine Farbe, die zu deinem Design passt */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px; /* Runde die Ecken für einen modernen Look ab */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Einen leichten Schatten für Tiefe hinzufügen */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Einen leichten Schatten um den Button hinzufügen */
+    transition: background-color 0.3s ease; /* Eine Übergang für interaktive Hover-Effekte hinzufügen */
+}
+#see-more {
+    color: #e5572f; /* Setzt die Textfarbe auf Orange */
+    font-size: larger;
+}
+
+
+#featured-animals-button:hover { /* für 4 Tiere mit einem besonders aussehen hover */
+    background-color: #e5572f; /* Eine etwas dunklere Farbe für den Hover-Zustand */
+}
+header a{ /* farbe und abstand für die nav */
+    color: #eee;
+    margin-right: 40px;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{ /* für bilder */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{  /*für die text die in der mitte der seite*/
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{ /*eigenschaften für author also in unsere seite mahmood */
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,/* für title und topic unter mahmood also spiznahme und tier */
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{ /* orange farbe für die tier */
+    color: #f1683a;
+}
+.carousel .list .item .buttons{ /*eigenschaften für buttons sub und see more (dicke und abstände und grösse) */
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{ /* farbe und abstände und dicke und art für die wörter die in buttons sind kein border und abstände zwischen buchstaben*/
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carousel .list .item .buttons button:nth-child(2){ /* für die 2 button also subcripe hier machen wir es transparent und mit border(rahmen) art sollid und farbe */
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail eigenschaften für die bilder die unten richts sind hier gibe ich allgemeine eigenschaften */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{ /* hier passen wir alles also die grösse und breite und die länge */
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{ /* die bilder sind gleich wie item*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{ /* die text die in die kleinen bilder */
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{ /* die titel z.b löwe wird fett geschriben */
+    font-weight: 500;
+}
+.thumbnail .item .content .description{ /* unter löwe also sein fähigkeiten auch fett geschriben aber 300 und nicht 500 */
+    font-weight: 300;
+}
+/* arrows Pfeil nach links und richts */
+.arrows{/* abstände und position*/
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{ /* breite und dicke und rahmen und farbe und cursor also maus anzeiger */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* die rahmen wird radius also rund angezeigt */
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+.arrows button:hover{ /* hover effect also wenn wir mit dem maus daruf klicken wollen wird die farbe andres gezeigt */
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){ /* zeig die erste item */
+    z-index: 1;
+}
+
+
+
+/* Animationstext im ersten Element */
+/*hier damit die elemente autmatisch angezeigt wird */
+/* Diese Stile sind für das erste Slide-Element im Karussell. 
+   Sie sorgen dafür, dass das Slide-Element anfangs ein wenig nach unten verschoben, 
+   unscharf und durchsichtig ist. Das macht den Anfangszustand der Animation. */
+
+.carousel .list .item:nth-child(1) .content .author, 
+.carousel .list .item:nth-child(1) .content .title, 
+.carousel .list .item:nth-child(1) .content .topic, 
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);/* Verschiebt das Element 50 Pixel nach unten. */
+    filter: blur(20px); /* Macht das Bild um 20 Pixel unscharf. */
+    opacity: 0;/* Das Element ist komplett transpalent. */
+    animation: showContent .5s 1s linear 1 forwards;/* Definiert die Animation'showContent', die 0.5 Sekunden dauert und nach einer Verzögerung von 1 Sekunde einmal abgespielt wird. */
+}
+/* Definition der Animation 'showContent' */
+@keyframes showContent{
+    to{
+        transform: translateY(0px); /* Bewegt das Element zurück zu seiner ursprünglichen Position (nach oben). */
+        filter: blur(0px);/* Entfernt die Unschärfe. */
+        opacity: 1;/* Das Element wird voll sichtbar (nicht durchsichtig). */
+    }
+}
+/* Verzögerung für die Animation des Titels im ersten Slide-Element */
+/* Der Titel wird später als die anderen Elemente angezeigt. */
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important; /* Beginnt die Animation nach 1,2 Sekunden. '!important' bedeutet, dass diese Regel Vorrang hat. */
+}
+/* Verzögerung für die Animation des Themas im ersten Slide-Element */
+/* Das Thema wird etwas später als der Titel angezeigt. */
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important; /* Beginnt die Animation nach 1,4 Sekunden. '!important' sorgt dafür, dass diese Einstellung verwendet wird. */
+}
+/* Verzögerung für die Animation der Beschreibung im ersten Slide-Element */
+/* Die Beschreibung wird nach dem Thema angezeigt. */
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;/* Beginnt die Animation nach 1,6 Sekunden. '!important' gibt an, dass diese Zeitangabe wichtig ist. */
+}
+/* Verzögerung für die Animation der Buttons im ersten Slide-Element */
+/* Die Buttons werden zuletzt angezeigt. */
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;/* Die Buttons beginnen sich nach 1,8 Sekunden zu animieren. '!important' bedeutet, dass diese Zeit eingehalten werden muss. */
+}
+
+/* Animation beim nächsten Klick erstellen */
+/* Start der Animation beim Klicken auf den "Weiter"-Button */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;/* Setze die Breite des Bildes */
+    height: 220px;/* Setze die Höhe des Bildes */
+    position: absolute; /* Positioniere das Bild absolut */
+    bottom: 50px;/* Abstand von unten: 50 Pixel */
+    left: 50%;/* Zentriere es horizontal */
+    border-radius: 30px;/* Runde die Ecken des Bildes */
+    animation: showImage .5s linear 1 forwards;/* Wende die "showImage" Animation an */
+}
+/* Definiere die Animation "showImage" */
+@keyframes showImage{
+    to{
+        bottom: 0;/* Bewege das Bild nach unten */
+        left: 0;/* Bewege das Bild nach links */
+        width: 100%; /* Breite des Bildes: 100% des Elternelements */
+        height: 100%; /* Höhe des Bildes: 100% des Elternelements */
+        border-radius: 0;/* Keine abgerundeten Ecken */
+    }
+}
+/* Start der Animation für das Thumbnail beim Klicken auf den "Weiter"-Button */
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;/* Verstecke überstehende Inhalte */
+    animation: showThumbnail .5s linear 1 forwards;/* Wende die "showThumbnail" Animation an */
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+/* Definiere die Animation "showThumbnail" */
+@keyframes showThumbnail{
+    from{
+        width: 0; /* Starte mit einer Breite von 0 */
+        opacity: 0;/* Starte vollständig transparent */
+    }
+}
+/* Animationseffekt für das Thumbnail beim Klicken auf den "Weiter"-Button */
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+/* Definiere die Animation "effectNext" */
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);/* Bewege das Thumbnail von rechts nach links */
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 10s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+/* Beginn der Media Query für Geräte mit einer maximalen Bildschirmbreite von 678px, 
+    dies bedeutet in der Regel, dass die folgenden Stile auf Mobilgeräten angewandt werden, 
+    da diese üblicherweise schmaler sind als 678px. */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0; /* Entfernt den rechten Innenabstand des Inhalts in den Karussell-Elementen,
+        um zu verhindern, dass der Inhalt zu nah am Rand des Bildschirms ist, wenn der Bildschirm schmaler wird. */
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px; /* Reduziert die Schriftgröße der Titel in den Karussell-Elementen auf 30px, 
+        um eine bessere Lesbarkeit auf kleineren Bildschirmen zu gewährleisten und um zu vermeiden,
+        dass der Text zu groß und überwältigend wirkt. */
+    }
+
+}
+
+.login-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+#login-btn {
+    padding: 5px 10px;
+    background-color: #f1683a; /* Farbe deines "SEE MORE"-Buttons */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.login-form {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #f1683a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    background-color: #e5572f; /* Hintergrundfarbe des Footers */
+    color: #eee; /* Textfarbe */
+    font-family: 'Poppins', sans-serif; /* Schriftart */
+    padding: 10px 40px; /* Padding für oben/unten und links/rechts */
+    display: flex; /* Flexbox für innere Elemente */
+    align-items: center; /* Vertikal zentrieren der Inhalte */
+    justify-content: space-between; /* Inhalte gleichmäßig auf der X-Achse verteilen */
+  }
+  
+  footer nav a {
+    color: #eee; /* Textfarbe der Links */
+    text-decoration: none; /* Keine Unterstreichung */
+    padding: 0 20px; /* Abstand zwischen den Links */
+    font-size: 12px; /* Schriftgröße */
+    transition: color 0.3s ease; /* Weicher Übergang für die Farbe */
+  }
+  
+  footer nav a:hover {
+    color: #000; /* Die Textfarbe der Links ändert sich beim Darüberfahren mit der Maus */
+    text-decoration: underline; /* Optional kannst du auch eine Unterstreichung hinzufügen */
+  }
+  
+  footer .footer-text {
+    font-size: 12px; /* Schriftgröße für den Footer-Text */
+  }

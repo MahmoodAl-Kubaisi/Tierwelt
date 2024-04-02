@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../bilder/Tiere.jpg');
+    /* Pfad zum Hintergrundbild anpassen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Anfang der Seite ausrichten */
+    font-family: "Poppins", sans-serif;
+}
+
+table {
+    width: 60%;
+    margin-top: 150px;
+    margin-right: 500px;
+    /* Abstand von der oberen Kante */
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dunkler Hintergrund mit 40% Transparenz */
+    color: #fff;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #e5572f;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(229, 87, 47, 0.6);
+    /* Dunkelorange mit 60% Transparenz */
+}
+
+tr:nth-child(even) {
+    background-color: rgba(51, 51, 51, 0.3);
+    /* Dunkelgrau mit 30% Transparenz */
+}
+
+tr:hover {
+    background-color: rgba(229, 87, 47, 0.8);
+    /* Hover-Effekt für Zeilen */
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    /* hier giben wir die eigenschaften für header*/
+    width: 1140px;
+    max-width: 80%;
+    margin-left: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    /* farbe und abstand für die nav */
+    color: #eee;
+    margin-right: 40px;
+}
