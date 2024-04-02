@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierwelt Mahmood Al-Kubaisi</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="../html/videos.html">Videos</a>
+            <a href="../html/herkunft.html">Herkunft der Tiere</a>
+            <a href="../html/kontakt.html">Kontakt/Impressum</a>
+            
+        </nav>
+        <button id="featured-animals-button">4 Tiere mit einem besonders aussehen</button>
+        <div class="login-container">
+            <button id="login-btn">Login</button>
+            <div class="login-form">
+                <form id="loginForm">
+                    <input type="text" placeholder="Username" required />
+                    <input type="password" placeholder="Password" required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../bilder/Elch.jpg">
+                <div class="content">
+                    <div class="author">Mahmood</div>
+                    <div class="title">"der König der Wälder"</div>
+                    <div class="topic">Elch</div>
+                    <div class="des">
+                       
+
+Der Elch, mit seinem beeindruckenden Geweih und massiver Gestalt, ist ein majestätisches Tier der nördlichen Wälder. Seine imposante Erscheinung und ruhige Natur machen ihn zu einem faszinierenden Bewohner der Wildnis. Um mehr Informationen zu sehen, klicken Sie auf den Button <span id="see-more">SEE MORE</span>.
+                    </div>
+                    <div class="buttons">
+                        <button class="see-more3">SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Löwe.jpg">
+                <div class="content">
+                    <div class="author">Mahmood</div>
+                    <div class="title">"Der König"</div>
+                    <div class="topic">Löwe</div>
+                    <div class="des">
+                     Der Löwe, bekannt als der König der Savanne, beeindruckt mit seiner majestätischen Mähne und kraftvollen Statur. Sein tiefes Brüllen hallt weit über die Ebenen Afrikas. Diese faszinierenden Großkatzen symbolisieren Stärke und Mut. Um mehr Informationen zu sehen, klicken Sie auf den Button <span id="see-more">SEE MORE</span>.
+                    </div>
+                    <div class="buttons">
+                        <button class="see-more2">SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Elefant.jpg">
+                <div class="content">
+                    <div class="author">Mahmood</div>
+                    <div class="title">"Koloss"</div>
+                    <div class="topic">Elefant</div>
+                    <div class="des">
+                      
+                      Der Elefant, das größte Landtier der Erde, beeindruckt mit seiner massiven Statur und den charakteristischen langen Stoßzähnen. Seine sanften Augen und das soziale Verhalten in Herden zeugen von einer tiefen Intelligenz. Um mehr Informationen zu sehen, klicken Sie auf den Button <span id="see-more">SEE MORE</span>..
+                    </div>
+                    <div class="buttons">
+                        <button class="see-more1">SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Jaguar.jpg">
+                <div class="content">
+                    <div class="author">Mahmood</div>
+                    <div class="title">"Onza"</div>
+                    <div class="topic">Jaguar</div>
+                    <div class="des">
+                        
+
+                        Der Jaguar, mit seinem prächtigen goldgelben Fell und markanten schwarzen Flecken, ist eine Erscheinung von wilder Schönheit. Seine ausdrucksstarken Augen und die anmutige Statur machen ihn unverwechselbar. Um mehr Informationen zu sehen, klicken Sie auf den Button.<span id="see-more">SEE MORE</span>
+
+                    </div>
+                    <div class="buttons">
+                        <button class="see-more">SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail (die bilder die klein sind unten) -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../bilder/Elch.jpg">
+                <div class="content">
+                    <div class="title">
+                        Elch
+                    </div>
+                    <div class="description">
+                        Majestätisch, ruhig, imposant.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Löwe.jpg">
+                <div class="content">
+                    <div class="title">
+                        Löwe
+                    </div>
+                    <div class="description">
+                        Königlich, mutig, stolz🦁.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Elefant.jpg">
+                <div class="content">
+                    <div class="title">
+                        Elefant
+                    </div>
+                    <div class="description">
+                        Sanft, intelligent, mächtig🦏.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../bilder/Jaguar.jpg">
+                <div class="content">
+                    <div class="title">
+                        Jaguar
+                    </div>
+                    <div class="description">
+                        Elegant, flink, geheimnisvoll🐆.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev nach rechts und nach links -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+ 
+    <script src="../js/homepage.js"></script> <!--hier binden wir javascript ein-->
+    <footer> <!--fusszeile mit 3 nav in diesem nav gibt es 3 links-->
+        <nav>
+          <a href="https://www.zoo.ch/de/zoobesuch/tickets-preise">TICKETS & PREISE</a>
+          <a href="https://www.myswitzerland.com/de-ch/erlebnisse/sommer-herbst/zoo-tiererlebnisse/zoos-suche/">Zoos in der Schweiz</a>
+          <a href="https://www.google.ch/maps/search/zoos+in+der+scweitz/@47.3682423,8.5784021,12z/data=!3m1!4b1?entry=ttu">Zoos Adressen</a>
+        </nav>
+        <div class="footer-text">Mahmood Al-Kubaisi © 2024</div><!--div für fusszeile mit meinem nahme und copy right -->
+      </footer>
+</body>
+</html>
